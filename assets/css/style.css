@@ -1,23 +1,224 @@
-/* Typografi */
-@import url("https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap");
+/* =========================
+   Root 
+========================= */
 
-/* Variables */
+/* =========================
+   Google Fonts
+========================= */
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Oranienbaum&display=swap');
+
+:root {
+  /* Typografi */
+  --font-heading: 'Anton', sans-serif;
+  --font-body: 'Oranienbaum', serif;
+  --lh: 1.6;
+
+  /* Farver */
+  --bg: #32352f;
+  --text: #e8e8e3;
+  --muted: #b7b9b0;
+  --border: #4a4d46;
+
+  /* Layout */
+  --container: 1100px;
+  --gap: 16px;
+  --radius: 12px;
+}
+
+/* =========================
+   Base 
+========================= */
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
-:root {
+html,
+body {
+  height: 100%;;
 }
 
-/* General styling */
-/* Header */
-/* Navbar */
-/* Footer */
+body {
+  margin: 0;;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  line-height: var(--lh);
+  font-size: 24px;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: min(100% - 2rem, var(--container));
+  margin-inline: auto;
+}
+
+/* =========================
+   Header / Nav
+========================= */
+header.hero {
+  position: relative;
+}
+
+.main-nav {
+  position: absolute;
+  top: 12px;
+  left: 0;
+  right: 50px;
+  display: flex;
+  justify-content: right;
+  gap: 12px;
+  z-index: 2;
+}
+
+.main-nav a {
+  font-size: 36px;
+  padding: 6px 10px;
+}
+
+.main-nav ul {
+  display: flex;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav a {
+  transition: border-color 0.5s ease;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+  border-bottom: 1px solid var(--muted);
+}
+
+/* =========================
+   Hero
+========================= */
+.hero-image {
+  width: 100%;
+  height: 640px;
+  object-fit: cover;
+  filter: brightness(.9);
+}
+
+header.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(80deg, var(--bg), transparent 55%, var(--bg));
+}
+
+.hero-text {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: 18%;
+  z-index: 2;
+}
+
+.hero-text h1 {
+  margin: 0 0 6px 0;
+  font-family: var(--font-heading);
+  font-size: 135px;
+  line-height: 1;
+  padding-left: 50px;
+  letter-spacing: 7px;
+}
+
+.hero-text p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 34px;
+  padding-left: 50px;
+}
+
+/* =========================
+   Intro-tekst
+========================= */
+.intro {
+  padding: 30px;;
+}
+
+.intro p {
+  margin-bottom: 14px;
+  max-width: 75ch;
+  padding-left: 50px;
+}
+
+.greek-face {
+  position: absolute;
+  top: 650px;
+  right: -230px;
+  width: 840px;
+  opacity: 0.25;
+  filter: brightness(1.9) contrast(2.5);
+  mix-blend-mode: screen;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* =========================
+   Method-sektion
+========================= */
+.method {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin: 140px auto;
+  max-width: var(--container);
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  
+}
+
+.method img {
+  width: 55%;
+  border-radius: var(--radius);
+}
 
 
+.method .method-text p {
+  margin-bottom: 8px;
+  font-size: 26px;
+  padding-right: 40px;
+}
 
-/* ================================
-  MEDIA QUERIES
-  ================================ */
+.method .method-text a {
+  display: inline-block;
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 30px;
+  letter-spacing: 0.5px;
+  transition: transform 0.2s ease;
+}
+
+.method .method-text a:hover {
+  transform: scale(1.05);
+}
+
+/* =========================
+   Footer
+========================= */
+footer {
+  border-top: 1px solid var(--border);
+  padding: 24px 0 40px;
+  color: var(--muted);
+  font-size: 24px;
+}
+
