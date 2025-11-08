@@ -190,6 +190,7 @@ header.hero::after {
 .method img {
   width: 55%;
   border-radius: var(--radius);
+  filter: brightness(.7);
 }
 
 
@@ -215,6 +216,7 @@ header.hero::after {
 /* =========================
    Footer
 ========================= */
+
 footer {
   border-top: 1px solid var(--border);
   padding: 24px 0 40px;
@@ -225,16 +227,14 @@ footer {
 
 
 /* =========================
-   About (fixet)
+   About 
 ========================= */
 
-/* lille hero på about */
 .hero--slim .hero-image {
   height: 90px;
   object-position: 50% 6%;
 }
 
-/* layout for sektionen */
 .about-top {
   position: relative;
   display: grid;
@@ -300,32 +300,28 @@ footer {
 
 }
 
-/* --- Some of my work --- */
 .about-work {
-  max-width: var(--container);
-  margin: 40px auto 120px;
+  margin: 150px 50px 120px;
   padding: 0 50px;
 }
 
 .about-work h2 {
   font-family: var(--font-heading);
-  font-size: 28px;
+  font-size: 38px;
   margin: 0 0 16px;
-  text-align: center;
+  font-weight: normal;
 }
 
 .work-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
 }
 
 .work-card {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   overflow: hidden;
-  display: grid;
-  grid-template-rows: auto 1fr;
   transition: transform .15s ease;
 }
 
@@ -335,8 +331,10 @@ footer {
 
 .work-card img {
   width: 100%;
+  height: 400px;
   display: block;
   object-fit: cover;
+  filter: brightness(.7);
 }
 
 .work-meta {
@@ -345,12 +343,172 @@ footer {
 
 .work-meta h3 {
   font-family: var(--font-heading);
+  font-size: 24px;
+  margin: 0 0 6px;
+  letter-spacing: 1.3px;
+  font-weight: normal;
+}
+
+.greek-face2 {
+  position: absolute;
+  top: 750px;
+  right: 1630px;
+  width: 840px;
+  opacity: 0.25;
+  filter: brightness(1.9) contrast(2.5);
+  mix-blend-mode: screen;
+  z-index: 0;
+  pointer-events: none;
+  transform: scaleX(-1);
+}
+
+/* =========================
+   Work
+========================= */
+.hero--slim .hero-image {
+  height: 90px;
+  object-position: center top;
+}
+.greek-face3 {
+  position: absolute;
+  top: 150px;
+  right: -230px;
+  width: 840px;
+  opacity: 0.25;
+  filter: brightness(1.9) contrast(2.5);
+  mix-blend-mode: screen;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.work-intro {
+  max-width: none;
+  margin: 50px 50px 100px;
+}
+
+.work-intro h1 {
+  font-family: var(--font-heading);
+  font-size: 48px;
+  line-height: 1.05;
+  letter-spacing: 1px;
+  margin: 0 0 12px;
+  font-weight: normal;
+}
+
+.work-intro p {
+  max-width: 70ch;
+  margin: 0 0 10px;
+}
+
+
+.work-process-title {
+  font-family: var(--font-heading);
+  font-size: 40px;
+  letter-spacing: .5px;
+  font-weight: normal;
+  text-align: center;
+}
+
+
+.process {
+  max-width: var(--container);
+  padding: 0 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 34px 64px;
+}
+
+
+.step h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 19px;
+  font-family: var(--font-heading);
+  font-size: 26px;
+  line-height: 1.2;
+  font-weight: normal;
+}
+
+.step .nr {
+  font-weight: normal;
+  color: var(--text);
+}
+
+.step i.fa-solid,
+.step i.fa-regular,
+.step i.fa-light {
   font-size: 20px;
+  margin-right: 4px;
+  transform: translateY(1px);
+}
+
+.step p {
+  margin: 0;
+  font-size: 24px;
+  line-height: 1.65;
+  max-width: 50ch;
+}
+
+/* =========================
+   Case studies
+========================= */
+ .casestudies {
+  max-width: var(--container);
+  margin: 80px auto 120px;
+  padding: 20px 50px;
+  text-align: center;
+
+}
+
+.casestudies h2 {
+  font-family: var(--font-heading);
+  font-size: 38px;
+  margin: 100px 0 26px;
+  font-weight: normal;
+  text-align: center;
+}
+
+.cases-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 26px;
+}
+
+.case-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  background: rgba(255, 255, 255, 0.02);
+  transition: transform .12s ease;
+}
+
+.case-card:hover {
+  transform: scale(1.01);
+}
+
+.case-card img {
+  width: 100%;
+  height: 300px;
+  display: block;
+  object-fit: cover;
+}
+
+.case-meta {
+  padding: 16px 18px 18px;
+}
+
+.case-meta h3 {
+  font-family: var(--font-heading);
+  font-weight: normal;
+  font-size: 26px;
   margin: 0 0 6px;
 }
 
-.work-meta p {
-  color: var(--muted);
+.case-meta p {
   margin: 0;
-  max-width: 55ch;
+  font-size: 24px;
+  line-height: 1.5;
 }
