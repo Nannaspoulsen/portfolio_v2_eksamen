@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Culinaria • Case Study</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+    <header class="hero hero--slim">
+        <img src="assets/img/2048px-Nicolas_Poussin,_French_-_The_Birth_of_Venus_-_Google_Art_Project.jpg" alt=""
+            class="hero-image" />
+        <nav class="main-nav">
+            <ul>
+                <li><a href="Index.html">home</a></li>
+                <li><a href="About.html">about</a></li>
+                <li><a href="Work.html" class="active">work</a></li>
+                <li><a href="Contact.html">contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="cs">
+        <div class="cs-header container">
+            <a href="Work.html" class="cs-back">&larr; back to projects</a>
+
+            <h1 class="cs-title">Culinaria</h1>
+
+            <p class="cs-intro">
+                Culinaria is a conceptual platform connecting home cooks, amateur chefs, and professionals worldwide through recipes,
+                food stories, and shared kitchen knowledge. 
+                The project explores modular design systems, ORCA object modelling, user flows, and the ethical boundaries of design psychology.
+            </p>
+
+        </div>
+
+        <section class="cs-grid container">
+
+            <article class="cs-section">
+                <figure class="cs-media">
+                    <img src="./assets/img/Culinaria1.png" alt="Object Mapping" />
+                </figure>
+                <div class="cs-text">
+                    <h3><span class="nr">1.</span> Research and Object Mapping</h3>
+                    <p>
+                    We began the project by analysing three pre-defined personas: the Home Cook, the Amateur Cook, and the Professional Chef. Using the ORCA methodology, we identified and structured the platform’s main objects — Recipe, Food Story, Professional Chef. From there, we mapped their relationships through a nested object matrix, defining cardinalities.
+                    This process established the foundation for a modular and scalable content structure.
+                    </p>
+                </div>
+            </article>
+            <article class="cs-section">
+                <figure class="cs-media">
+                    <img src="./assets/img/Culinaria2.png" alt="CTA Inventory and user story" />
+                </figure>
+                <div class="cs-text">
+                    <h3><span class="nr">2.</span> CTA Inventory and User Stories</h3>
+                    <p>
+                        Next, we developed a detailed CTA inventory to define possible actions for each user type. This clarified what each
+                        persona could do — Pro Chefs create, Amateurs review, and Home Cooks save or like recipes. From this mapping, we wrote
+                        user stories and selected one for each persona to visualise through user flows. This helped connect user goals directly
+                        to UI functionality and system capabilities.
+                    </p>
+                </div>
+            </article>
+            <article class="cs-section">
+                <figure class="cs-media">
+                    <img src="./assets/img/Culinaria3.png" alt="Userflows" />
+                </figure>
+                <div class="cs-text">
+                    <h3><span class="nr">3.</span> User Flows</h3>
+                    <p>
+                        Each selected user story was turned into a user flow with decision points and loops to ensure realistic behaviour — for
+                        example, login prompts or validation errors. We then built wireflows in Figma, showing how users move through the system
+                        step by step. This process helped define the hierarchy of actions and made it clear how feedback messages (like “Recipe
+                        saved”) and error states should appear.
+                    </p>
+                </div>
+            </article>
+
+            <article class="cs-section">
+                <figure class="cs-media">
+                    <img src="./assets/img/Culinaria4.png" alt="Modular component design examples" />
+                </figure>
+                <div class="cs-text">
+                    <h3><span class="nr">4.</span> Modular Component Design</h3>
+                    <p>
+                        With the structure and flows in place, we designed a consistent set of UI components in Figma to support the
+                        system. Each component was built with reusability and clarity in mind. We focused on creating clean, modular elements
+                        that could appear across different parts of the interface without losing consistency. This approach made the design
+                        system scalable.
+                    </p>
+                </div>
+            </article>
+
+            <article class="cs-reflection">
+                <h3>Reflection and Learning</h3>
+                <p>
+                    Working with OOUX completely changed how I think about design. Starting from objects and their relationships made
+                    everything clearer and more structured - every component had a defined purpose and connection. It’s a smart way to
+                    design, because it keeps consistency across screens and reduces rework later. I also learned how easily design
+                    psychology can shift from guiding to manipulating users, and how important it is to stay transparent in every
+                    interaction.
+                </p>
+            </article>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Nanna Spandet Poulsen</p>
+    </footer>
+</body>
+
+</html>
