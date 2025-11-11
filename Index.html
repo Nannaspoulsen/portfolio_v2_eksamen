@@ -6,13 +6,26 @@
       <title>Menneskeværk • Portfolio</title>
       <link rel="stylesheet" href="assets/css/style.css">
     <script src="./assets/js/app.js" defer></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+    <script type="module" src="./assets/js/mountHero.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+
   </head>
-<!DOCTYPE html>
-<html lang="da">
 
 <body>
 
-  <header class="hero">
+  <div id="hero-root"
+    data-image="assets/img/2048px-Nicolas_Poussin,_French_-_The_Birth_of_Venus_-_Google_Art_Project.jpg"
+    data-title="PORTFOLIO" data-subtitle="Stories thoughtfully born into digital spaces" data-active="home"
+    data-slim="false">
+  </div>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+  <script src="assets/js/HeroApp.js"></script>
+
+
+  <!-- Min gamle hero, lavet før jeg lavede vue komponenten -- 
+   <header class="hero">
     <img src="./assets/img/2048px-Nicolas_Poussin,_French_-_The_Birth_of_Venus_-_Google_Art_Project.jpg" alt="The Birth of Venus" class="hero-image">
 
     <nav class="main-nav">
@@ -28,7 +41,7 @@
       <h1>PORTFOLIO</h1>
       <p>Stories thoughtfully born into digital spaces</p>
     </div>
-  </header>
+  </header> -->
 
   <main>
     <section class="intro">
@@ -60,9 +73,39 @@
     </section>
   </main>
 
-  <footer>
-    <p>© 2025 Nanna Spandet Poulsen</p>
-  </footer>
+<footer class="site-footer">
+  <div class="footer-inner container">
+    <section class="footer-brand">
+      <h3 class="brand">Nanna Spandet Poulsen</h3>
+      <p class="tagline">UX/UI Designer and Frontend Developer</p>
+    </section>
+
+    <nav class="footer-nav">
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="Index.html">Home</a></li>
+        <li><a href="Work.html">Work</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <section class="footer-social">
+      <h4>Elsewhere</h4>
+      <ul>
+        <li><a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+        <li><a href="#"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a></li>
+        <li><a href="mailto:nannaspoulsen@hotmail.com"><i class="fa-solid fa-envelope"></i> Email</a></li>
+      </ul>
+    </section>
+  </div>
+
+  <div class="footer-meta">
+    <p>© 2025 - Nanna Spandet Poulsen</p>
+  </div>
+</footer>
+
+
 
 </body>
 
