@@ -2,9 +2,6 @@
    Root 
 ========================= */
 
-/* =========================
-   Google Fonts
-========================= */
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Oranienbaum&display=swap');
 
 :root {
@@ -68,7 +65,7 @@ a {
   margin-inline: auto;
 }
 
-/* /* =========================
+/* =========================
    Header / Nav
 ========================= */
 
@@ -315,7 +312,7 @@ header.hero::after {
 }
 
 /* =========================
-   About 
+   About siden
 ========================= */
 
 .about-top {
@@ -446,7 +443,7 @@ header.hero::after {
 }
 
 /* =========================
-   Work
+   Work siden
 ========================= */
 
 .hero--slim .hero-image {
@@ -535,7 +532,7 @@ header.hero::after {
 }
 
 /* =========================
-   Case studies
+   Case studies siderne
 ========================= */
 
  .casestudies {
@@ -597,10 +594,6 @@ header.hero::after {
   font-size: 24px;
   line-height: 1.5;
 }
-
-/* =========================
-   Case Study
-========================= */
 
 .hero--slim .hero-image {
   height: 90px;
@@ -747,7 +740,7 @@ header.hero::after {
   height: 68px;
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  background: rgba(50, 53, 47, 0.75);
+  background: rgba(99, 104, 94, 0.75);
   color: var(--text);
   display: grid;
   place-items: center;
@@ -768,7 +761,12 @@ header.hero::after {
   pointer-events: auto;
 }
 
-.to-top.is-visible svg {
+.to-top i {
+  font-size: 28px;
+  line-height: 1;
+}
+
+.to-top.is-visible i {
   animation: toTopFloat 2.2s ease-in-out infinite;
 }
 
