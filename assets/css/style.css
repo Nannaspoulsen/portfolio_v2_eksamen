@@ -29,9 +29,15 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
-  height: 100%;;
+  height: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -40,7 +46,7 @@ body {
   color: var(--text);
   font-family: var(--font-body);
   line-height: var(--lh);
-  font-size: 24px;
+  font-size: 22px;
 }
 
 img {
@@ -85,7 +91,7 @@ header.hero {
 }
 
 .main-nav a {
-  font-size: 36px;
+  font-size: 26px;
   padding: 6px 10px;
 }
 
@@ -108,9 +114,10 @@ header.hero {
 /* =========================
    Hero
 ========================= */
+
 .hero-image {
-  width: 100%;
-  height: 970px;
+  width: 100vw;
+  height: 770px;
   object-fit: cover;
   filter: brightness(.9);
 }
@@ -133,7 +140,7 @@ header.hero::after {
 .hero-text h1 {
   margin: 0 0 0 0;
   font-family: var(--font-heading);
-  font-size: 135px;
+  font-size: 110px;
   line-height: 1;
   padding-left: 50px;
   letter-spacing: 7px;
@@ -141,8 +148,7 @@ header.hero::after {
 
 .hero-text p {
   margin: 0;
-  color: var(--muted);
-  font-size: 34px;
+  font-size: 27px;
   padding-left: 50px;
   padding-bottom: 40px;
 } 
@@ -150,7 +156,7 @@ header.hero::after {
 /* --- Slim version til undersider --- */
 
 .hero--slim .hero-image {
-  height: 90px;
+  height: 70px;
   object-position: 50% 6%;
 }
 
@@ -172,16 +178,23 @@ header.hero::after {
   padding-left: 50px;
 }
 
+.greek-face-container {
+  position: relative;
+  height: 0;
+  overflow: visible;
+}
+
 .greek-face {
   position: absolute;
-  top: 780px;
-  right: -230px;
+  top: -600px;
+  right: -250px;
   width: 840px;
   opacity: 0.25;
   filter: brightness(1.9) contrast(2.5);
   mix-blend-mode: screen;
   z-index: 0;
   pointer-events: none;
+
 }
 
 /* =========================
@@ -333,14 +346,15 @@ header.hero::after {
 
 .about-col--text h1 {
   font-family: var(--font-heading);
-  font-size: 66px;
+  font-size: 36px;
   line-height: 1.05;
   letter-spacing: 1px;
   margin: 0 0 6px;
+  font-weight: normal;
 }
 
 .about-sub {
-  font-size: 26px;
+  font-size: 20px;
   margin: 0 0 24px;
 }
 
@@ -351,32 +365,34 @@ header.hero::after {
 }
 
 .about-bullets li {
-  font-size: 24px;
+  font-size: 20px;
   line-height: 1.6;
   margin: 9px 0 ;
 }
 
 .about-body {
-  font-size: 24x;
+  font-size: 20px;
   line-height: 1.7;
-  max-width: none;
+  max-width: 65ch;
   margin: 0 0 24px;
+  
 }
 
 .about-col--photo {
   position: absolute;
   top: 0;
-  right: -1200px;
+  right: -600px;
   z-index: 0;
 }
 
 .about-col--photo img {
-  width: 980px;
-  height: 1000px;
+  width: 680px;
+  height: 700px;
   object-fit: cover;
   object-position: center;
   border-radius: 100%;
   filter: brightness(.7);
+
 
 }
 
@@ -387,7 +403,7 @@ header.hero::after {
 
 .about-work h2 {
   font-family: var(--font-heading);
-  font-size: 38px;
+  font-size: 36px;
   margin: 0 0 16px;
   font-weight: normal;
 }
@@ -423,7 +439,7 @@ header.hero::after {
 
 .work-meta h3 {
   font-family: var(--font-heading);
-  font-size: 24px;
+  font-size: 22px;
   margin: 0 0 6px;
   letter-spacing: 1.3px;
   font-weight: normal;
@@ -447,8 +463,8 @@ header.hero::after {
 ========================= */
 
 .hero--slim .hero-image {
-  height: 90px;
-  object-position: center top;
+  height: 70px;
+  object-position: 50% 6%;
 }
 .greek-face3 {
   position: absolute;
@@ -469,7 +485,7 @@ header.hero::after {
 
 .work-intro h1 {
   font-family: var(--font-heading);
-  font-size: 48px;
+  font-size: 36px;
   line-height: 1.05;
   letter-spacing: 1px;
   margin: 0 0 12px;
@@ -484,7 +500,7 @@ header.hero::after {
 
 .work-process-title {
   font-family: var(--font-heading);
-  font-size: 40px;
+  font-size: 36px;
   letter-spacing: .5px;
   font-weight: normal;
   text-align: center;
@@ -506,7 +522,7 @@ header.hero::after {
   gap: 10px;
   margin: 0 0 19px;
   font-family: var(--font-heading);
-  font-size: 26px;
+  font-size: 22px;
   line-height: 1.2;
   font-weight: normal;
 }
@@ -526,14 +542,10 @@ header.hero::after {
 
 .step p {
   margin: 0;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 1.65;
   max-width: 50ch;
 }
-
-/* =========================
-   Case studies siderne
-========================= */
 
  .casestudies {
   max-width: var(--container);
@@ -545,7 +557,7 @@ header.hero::after {
 
 .casestudies h2 {
   font-family: var(--font-heading);
-  font-size: 38px;
+  font-size: 36px;
   margin: 100px 0 26px;
   font-weight: normal;
   text-align: center;
@@ -585,19 +597,23 @@ header.hero::after {
 .case-meta h3 {
   font-family: var(--font-heading);
   font-weight: normal;
-  font-size: 26px;
+  font-size: 22px;
   margin: 0 0 6px;
 }
 
 .case-meta p {
   margin: 0;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 1.5;
 }
 
+/* =========================
+   Case Study siden
+========================= */
+
 .hero--slim .hero-image {
-  height: 90px;
-  object-position: center top;
+  height: 70px;
+  object-position: 50% 6%;
 }
 
 .cs-header {
@@ -606,13 +622,13 @@ header.hero::after {
 
 .cs-back {
   display: inline-block;
-  font-size: 23px;
+  font-size: 20px;
   margin-bottom: 62px;
 }
 
 .cs-title {
   font-family: var(--font-heading);
-  font-size: 64px;
+  font-size: 36px;
   line-height: 1.05;
   margin: 0 0 10px;
   letter-spacing: .5px;
@@ -654,7 +670,7 @@ header.hero::after {
 
 .cs-text h3 {
   font-family: var(--font-heading);
-  font-size: 28px;
+  font-size: 24px;
   line-height: 1.2;
   margin: 0 0 8px;
   font-weight: normal;
@@ -687,7 +703,7 @@ header.hero::after {
 
 .cs-reflection h3 {
   font-family: var(--font-heading);
-  font-size: 28px;
+  font-size: 24px;
   margin: 0 0 8px;
   font-weight: normal;
 }
@@ -733,31 +749,39 @@ header.hero::after {
 
 .to-top {
   position: fixed;
-  right: 94px;
-  bottom: 194px;
-  z-index: 999;
-  width: 68px;
-  height: 68px;
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  background: rgba(99, 104, 94, 0.75);
-  color: var(--text);
-  display: grid;
-  place-items: center;
+  right: 70px;
+  bottom: 50px;
+  z-index: 9999;
+  width: 60px;
+  height: 60px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  background: rgba(99, 104, 94, 0.9);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
-  backdrop-filter: blur(2px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, .25);
-  transition: opacity .25s ease, transform .25s ease, background .25s ease;
-  opacity: 0;
-  pointer-events: none;
+  font-size: 18px;
+  transition: all 0.3s ease;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .to-top:hover {
-  background: rgba(50, 53, 47, 0.95);
+  background: rgba(50, 53, 47, 1);
+  transform: translateY(0) scale(1.05);
 }
 
 .to-top.is-visible {
   opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
   pointer-events: auto;
 }
 
@@ -768,6 +792,19 @@ header.hero::after {
 
 .to-top.is-visible i {
   animation: toTopFloat 2.2s ease-in-out infinite;
+}
+
+@media (max-width: 768px) {
+  .to-top {
+    right: 20px;
+    bottom: 20px;
+    width: 50px;
+    height: 50px;
+  }
+  
+  .to-top i {
+    font-size: 20px;
+  }
 }
 
 /* =========================
